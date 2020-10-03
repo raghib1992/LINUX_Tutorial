@@ -14,3 +14,20 @@
 /run               system daemons thatr start very early (e.g. systemd and udev) to store temporary runtiem files like PID files
 /mnt               to mount external filesystem
 /media             for cdrom mounts
+--------------------------------------------------------------------------------------------------------
+
+#Files Types
+-              Regular files
+d              directory
+l              link
+c              special file or device file
+s              socket
+p              Nmaed pipe
+b              Block device
+---------------------------------------------------------------------------------------------------------
+
+# to find and locate files
+
+find .- name "File_name"       #'." is used for current directory
+locate file_name               # if locate command does not output any result then as root rum "updatedb"
+                               # make sure "mlocate package installed "yum install mlocate"
