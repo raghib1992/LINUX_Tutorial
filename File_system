@@ -36,4 +36,9 @@ locate file_name               # if locate command does not output any result th
 # to use wild card
 ## to create nile file in one command
 touch abc{1..9}-xyz
+--------------------------------------------------------------------------------------------------------
+
+# Hard link and soft link
+ln -s /home/nadim/shaheen.txt # soft link
+ln /home/nadim/shaheen.txt    #hardlink
 
