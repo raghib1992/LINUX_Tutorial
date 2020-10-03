@@ -31,3 +31,9 @@ b              Block device
 find .- name "File_name"       #'." is used for current directory
 locate file_name               # if locate command does not output any result then as root rum "updatedb"
                                # make sure "mlocate package installed "yum install mlocate"
+---------------------------------------------------------------------------------------------------------
+
+# to use wild card
+## to create nile file in one command
+touch abc{1..9}-xyz
+
