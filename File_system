@@ -1,0 +1,16 @@
+/boot     COntain file that is used by the boot loader
+/root     root user home directory. It is not same as /
+/dev      system devices (eg. disk, cd rom, speaker, flashdrive, keyboard etc)
+/etc     Configuration files
+/bin-/usr/bin/     Everyday user command
+/sbin-/usr/sbin    system/filesystem commands
+/opt               Optional add-onapplication (Not part of apps)
+/proc              Running processes (only exists in memory)
+/lib- usr/lib      C programming library files needed by commands and apps
+                   starce -e open pwd # if you want to check which command has which library
+/tmp               Directory for temporary files
+/home              directory for user
+/var               system logs
+/run               system daemons thatr start very early (e.g. systemd and udev) to store temporary runtiem files like PID files
+/mnt               to mount external filesystem
+/media             for cdrom mounts
