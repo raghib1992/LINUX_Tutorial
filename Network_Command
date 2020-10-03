@@ -1,0 +1,2 @@
+# To check IP configuration
+ifconfig /ip addr # to use ifconfig "yum install net-tools"
