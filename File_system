@@ -41,4 +41,35 @@ touch abc{1..9}-xyz
 # Hard link and soft link
 ln -s /home/nadim/shaheen.txt # soft link
 ln /home/nadim/shaheen.txt    #hardlink
+--------------------------------------------------------------------------------------------------------
+## Access Control List
+# To add permission for user
+setfacl -m u:user:rwx /path/to/file
+
+# To add permission for group
+setfacl -m g:group:rwx /path/to/file
+
+# To allow all files or directories to inherit ACL entries from the directory itis within
+setfacl -dm "entry" /path/to/file
+setfacl -Rm "entry" /path/to/file   #for recurrcive
+
+# to remove the specif entry 
+setfacl -x u:user /path/to/file
+
+# to remove all entries
+setfacl -b /path/to/file
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
