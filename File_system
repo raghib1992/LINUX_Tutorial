@@ -82,6 +82,15 @@ awk '{lenght($0) > 15' filename # to output fieldin which no. of character is mo
 ls -l | awk '(if{$9 == "keyword"} print $0;)' # get the filed Matching keywoed
 ls -l | awk '{print NF}'  #number of field
 -------------------------------------------------------------------------------
+# grep
+grep keyword file # search for keyword from the file
+grep -c keyword file # search for keyword and count from the file
+grep -i keyword file # search for keyword and ignore case sensetive
+grep -n keyword file # display match lines and no. of lines
+grep keyword file | awk '{print $5}'   #search for the keyword and only show the first field
+ls -l | grep -i desktop
+egrep -i "keyword1|keyword2" file # search for 2 keyword
+-----------------------------------------------------------------------------
 
 
 
