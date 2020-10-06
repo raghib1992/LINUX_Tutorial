@@ -104,11 +104,14 @@ sort filename | uniq -c #show the duplicate no.
 sort filename | uniq -d #only show repeated line
 ls -l | sort | uniq
 -----------------------------------------------------------------------------
-
-
-
-
-
+## wc
+wc filename  # lines word bits
+wc -l filename  # no. of lines
+wc -w filename  # no. of word
+wc -c filename  # no. of bits/character
+ls -l | wc -l
+grep keyword | wc -l
+-------------------------------------------------------------------------------
 
 
 
