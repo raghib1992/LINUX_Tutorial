@@ -1,4 +1,4 @@
-/boot     COntain file that is used by the boot loader
+/boot     Contain file that is used by the boot loader
 /root     root user home directory. It is not same as /
 /dev      system devices (eg. disk, cd rom, speaker, flashdrive, keyboard etc)
 /etc     Configuration files
@@ -70,7 +70,18 @@ cut -d: -f 6 /path/to/file # we select particular filed or column and each field
 cut -d: -f 6-8 /path/to/file # we select particular range of filed or column and each field is separated by delimiter (here : used)
 ls -l | cut -c2-5  # cut the output of any comand
 -------------------------------------------------------------------------------
-
+#awk
+awk '{print $1}'  #list first field/column from the file
+ls -l | awk '{print $1,$3}'
+ls -l | awk '{print $NF}'
+awk '/Keyword/ {print}' filename # seaarch for specific keyword
+awk -F: '{print $2}' filename  # output only second field/column from file
+echo "Hello Adam" | awk '{$2="Nadim"; print $0}' # replace mention field/column with the mention keyword
+cat filename | awk '{$2=Nadim; print $0}'
+awk '{lenght($0) > 15' filename # to output fieldin which no. of character is more than 15
+ls -l | awk '(if{$9 == "keyword"} print $0;)' # get the filed Matching keywoed
+ls -l | awk '{print NF}'  #number of field
+-------------------------------------------------------------------------------
 
 
 
