@@ -112,8 +112,13 @@ wc -c filename  # no. of bits/character
 ls -l | wc -l
 grep keyword | wc -l
 -------------------------------------------------------------------------------
+## compare file
+#diff line by line
+diff file1 file2
 
-
+#cmp byte by byte
+cmp file1 file2
+--------------------------------------------------------------------------------
 
 
 
