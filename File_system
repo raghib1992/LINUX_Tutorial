@@ -58,7 +58,18 @@ setfacl -x u:user /path/to/file
 
 # to remove all entries
 setfacl -b /path/to/file
-
+--------------------------------------------------------------------------------------------------------
+## File and text processing command
+# cut
+cut -c1 filename  # to get the first of each line
+cut -c2,4,6 filename  # to get the selected character from each line
+cut -c2-5 filename   # to get the range of the selected character form each line
+cut -c2-5,7-8 filename # as above but selecting range from two different range
+cut -b3-5 filename  # we cna select as per byte also
+cut -d: -f 6 /path/to/file # we select particular filed or column and each field is separated by delimiter (here : used)
+cut -d: -f 6-8 /path/to/file # we select particular range of filed or column and each field is separated by delimiter (here : used)
+ls -l | cut -c2-5  # cut the output of any comand
+-------------------------------------------------------------------------------
 
 
 
