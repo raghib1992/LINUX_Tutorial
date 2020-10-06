@@ -91,7 +91,19 @@ grep keyword file | awk '{print $5}'   #search for the keyword and only show the
 ls -l | grep -i desktop
 egrep -i "keyword1|keyword2" file # search for 2 keyword
 -----------------------------------------------------------------------------
+## sort/uniq
+sort filename  # show in alphabetical order
+sort -r filename #show in alphabetical but in reverse order
+sort -k2 filename # sort by the aphabetocal order of the selected field in the command i.e 2
+ls -l | sort -k9
 
+
+sort filename | uniq  #remove repeated field ## uniq command run with sort
+
+sort filename | uniq -c #show the duplicate no.
+sort filename | uniq -d #only show repeated line
+ls -l | sort | uniq
+-----------------------------------------------------------------------------
 
 
 
