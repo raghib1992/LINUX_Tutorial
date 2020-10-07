@@ -65,8 +65,24 @@ file:
 #to edit 
 visudo
 -------------------------------------------------------------------------------
+##Monitor user
 
+# to check login this time
+who
 
+#all the details of all user from reboot
+last
+
+# same as who command but give more information
+w
+
+# have to added not available, trace of the user, 
+yum install finger
+
+# give the information of ownself
+id
+id - username # give the detials of the user
+-------------------------------------------------------------------------------
 
 
 
