@@ -110,6 +110,7 @@ ctrl+d
 
 #to see time
 date
+date -s "12 Mar 2020 17:56:44"    ## to set date
 
 # to check for how long the system is up and how many user log in
 uptime
@@ -136,8 +137,41 @@ cal 1992
 # for binary calculation
 bc  #calculator
 -----------------------------------------------
+## processes and jobs
+
+#application=service --a program running into computer
+#script -- shell script or command are list of instruction
+#process -- when we run application it generate a process with process ID
+#daemon --it also a process but run in back ground, keep listeneing incoming and outgoing traffic
+#threads --a every process have many thread associated with it
+#job -- run a service or process at a schedule time
+
+# to start or stop or enable a service
+systemctl or service 
+sytemctl restart ntpd
+
+# to check the running process 
+ps -ef
 
 
+# to check ntp service
+ps -ef | ntp
+systemctl status ntpd
+
+ps -ef |grep rsyslog  # to check status of rsyslog service
+
+# status of system
+top  # to check system resources ## do man top
+to get out type 'q'
+
+# to kill process
+kill process_ID
+sytemctl stop ntpd
+
+# to schedule a process/script
+crontab -e # to edit
+min hour day month day_of_the_weak command/file/service..which is schedule
+----------------------------------------------------------------------------------------
 
 
 
