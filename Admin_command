@@ -1,0 +1,7 @@
+# vi editor
+# type 'x' to delete 1 character and 'd' for entire line and 'dd' for whole file content
+# type 'r' for replace withput entering into insert mode
+# type 'o' to creat new line and insert mode
+# type 'a' to create sapce and insert mode
+# type 'u' to undo delete
+# tpye '/keyword' to search word
