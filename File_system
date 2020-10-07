@@ -134,5 +134,22 @@ gzip filename
 
 #uncompress
 gzip -d filename/ gunzip filename
+--------------------------------------------------------------------
+## truncate
+# shrink the file
+truncate -s 40 filename #no. mention here is byte size
+---------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
 
 
