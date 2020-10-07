@@ -172,6 +172,19 @@ sytemctl stop ntpd
 crontab -e # to edit
 min hour day month day_of_the_weak command/file/service..which is schedule
 ----------------------------------------------------------------------------------------
+## crontab
+# type of crontab
+1. hourly 2. daily 3. Monthly 4.Weekly
+
+# specify the task in below file
+/etc/cron.
+# specify the time in below file
+/etc/anacrontab   #except hourly
+# for hourly
+/etc/cron.d/0hourly
+----------------------------------------------------------------------------------------
+
+
 
 
 
