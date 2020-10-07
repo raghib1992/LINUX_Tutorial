@@ -54,10 +54,17 @@ groupdel groupname
 
 #to modify user
 usermod -aG groupname username
+--------------------------------------------------------------------------
+## swithc user
 
+#to switch user
+su - username
 
-
-
+file:
+/etc/sudoers
+#to edit 
+visudo
+-------------------------------------------------------------------------------
 
 
 
