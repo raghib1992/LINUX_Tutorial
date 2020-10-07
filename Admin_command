@@ -68,7 +68,7 @@ visudo
 ##Monitor user
 
 # to check login this time
-who
+who/users
 
 #all the details of all user from reboot
 last
@@ -83,6 +83,20 @@ yum install finger
 id
 id - username # give the detials of the user
 -------------------------------------------------------------------------------
+## Talking to user
+
+# to broadcast message to all logged in user
+wall
+test
+ctrl+d ## to get out
+
+# write a message to specific user
+write username
+text
+start chatting with user
+ctrl+d
+------------------------------------------------------------------=------------------
+
 
 
 
