@@ -96,7 +96,16 @@ text
 start chatting with user
 ctrl+d
 ------------------------------------------------------------------=------------------
+## linux account authentication
 
+# Types of account
+1. local account
+2. Domain/Directory account # to open acc in 100 server
+
+# WinBIND (samba) - linux communicate with window
+# OpenLDAP (open source)
+# LDAP Lightweight Directory Access Protocol
+---------------------------------------------------------------------------------
 
 
 
