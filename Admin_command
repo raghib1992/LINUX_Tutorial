@@ -36,6 +36,40 @@ sed G filename # to view blank line after each line
 
 sed  '8!s/oldword/newword/g' filename  #replace oldword with new word except line 8th
 -----------------------------------------------------------------------------------------
+## User account management
+#files where all user and group record are store are following:
+1./etc/passwd
+2./etc/group
+3./etc/shadow
+
+useradd -g groupname -s /bin/bash -c "user description" -m -d /home/nadim nadim
+id username  #to check the details of the user
+groupadd admin  #can check the group in /etc/group
+
+# to delete user with directory
+userdel -r username
+
+# to del group
+groupdel groupname
+
+#to modify user
+usermod -aG groupname username
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     
