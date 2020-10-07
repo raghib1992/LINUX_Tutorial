@@ -106,6 +106,39 @@ ctrl+d
 # OpenLDAP (open source)
 # LDAP Lightweight Directory Access Protocol
 ---------------------------------------------------------------------------------
+## System Utility Command
+
+#to see time
+date
+
+# to check for how long the system is up and how many user log in
+uptime
+
+#to check hostname
+hostname
+
+# TO check machine
+uname
+
+uname -a # for more details
+
+# to locate command
+which command
+
+# to check calender
+cal
+
+# to check calender of particular year and month
+cal month year 
+cal 6 1992
+cal 1992
+
+# for binary calculation
+bc  #calculator
+-----------------------------------------------
+
+
+
 
 
 
