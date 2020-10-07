@@ -5,3 +5,38 @@
 # type 'a' to create sapce and insert mode
 # type 'u' to undo delete
 # tpye '/keyword' to search word
+:%s/oldword/newword    #replace old word with new word
+----------------------------------------------------------------------------------------
+## sed command
+# to replace wor
+sed 's/oldword/newword/g' filename # g-global if old is more than one place
+                                   # not change in the original file
+  
+  
+ sed -i 's/oldword/newword/g' filename # to make changes in file
+ 
+ sed -i 's/oldword//g' filename # to delete the word permanently
+ 
+ sed -i '/oldword/d' filename  #delete all word which match keyword
+ 
+ sed -i '/^$/d' filename # ^anything starting
+                         # $ having nothing
+                         
+sed -i '1d' filename # delete 1st line
+
+sed -i '1,2d' filename
+
+sed -i 's/\t//g' filename #replace tab with space
+
+sed -n 12,18p filename # to view line 12 to 18
+
+sed 12,18d filename # view all except line 12 to 18
+
+sed G filename # to view blank line after each line
+
+sed  '8!s/oldword/newword/g' filename  #replace oldword with new word except line 8th
+-----------------------------------------------------------------------------------------
+
+
+    
+                      
