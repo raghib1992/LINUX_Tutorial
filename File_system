@@ -44,6 +44,9 @@ ln /home/nadim/shaheen.txt    #hardlink
 --------------------------------------------------------------------------------------------------------
 ## Access Control List
 # To add permission for user
+
+
+
 setfacl -m u:user:rwx /path/to/file
 
 # To add permission for group
@@ -119,8 +122,17 @@ diff file1 file2
 #cmp byte by byte
 cmp file1 file2
 --------------------------------------------------------------------------------
+##Compress
+# to put all the files and everthing in one file
+tar cvf filename.tar /path/to/file
 
+# to extract everthing from the tar file
+tar xvf filename
 
+# compress 
+gzip filename
 
+#uncompress
+gzip -d filename/ gunzip filename
 
 
