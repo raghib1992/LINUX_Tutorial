@@ -139,6 +139,15 @@ gzip -d filename/ gunzip filename
 # shrink the file
 truncate -s 40 filename #no. mention here is byte size
 ---------------------------------------------------------------------
+## combining and splitting
+#to split file
+split -l 2 filenameold filenamenew #filenamenewaa, filenamenewab, ...
+
+# to combine
+cat file1 file2 file3 > file4
+---------------------------------------------------------------------
+
+
 
 
 
