@@ -260,10 +260,17 @@ sleep 5  # to delay for 5 sec to get back you prompt
  # to change the hostname
  hostnamectl set-hostname newhostname
  ------------------------------------------------------------------------------------------------------------------
+ ## Finding system INformation
  
+ # to get info about operating system
+ cat /etc/redhat-release
  
-
-
+ # to get kernnel information
+ uname -a
+ 
+# information processor memory
+dmidecode
+----------------------------------------------
 
 
 
