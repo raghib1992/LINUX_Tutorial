@@ -183,7 +183,32 @@ min hour day month day_of_the_weak command/file/service..which is schedule
 # for hourly
 /etc/cron.d/0hourly
 ----------------------------------------------------------------------------------------
+## Process Management
 
+# to delay process 
+sleep 5  # to delay for 5 sec to get back you prompt
+
+ sleep 100  # delay the prompt for 100 sec 
+ ctrl+z  stop the process and give yo back the prompt
+ jobs  # to check the list of process
+ bg # start the stopped process in backbround
+ fg  # to bring the process which was running in backgroung to foregroung
+ 
+ 
+ # to run process in background and not intrupt while closing terinal
+ nohup command &   # a file generated with messadge 
+ nohup command > /dull/null 2>&1 &    # not get ll the message
+ 
+ 
+ # prioprity
+ nice -n 5 command #rating between -20 to 19   -20 has highest priority
+  ---------------------------------------------------------------------------
+ 
+ 
+ 
+ 
+ 
+ 
 
 
 
