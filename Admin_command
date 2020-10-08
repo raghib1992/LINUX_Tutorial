@@ -231,6 +231,22 @@ sleep 5  # to delay for 5 sec to get back you prompt
  
  cat /proc/cpuinfo
  cat /proc/meminfo
+ -----------------------------------------------------------------------------------
+ ## Log Monitoring
+ log directory   /var/log
+ 
+ # boot
+ # chronyd +ntpd
+ # cron
+ # maillog
+ # secure
+ # messages  # all hardware, all information
+ 
+ # httpd
+ 
+ 
+ tail -f file  # to get updated log
+ ----------------------------------------------------------------------------------------------------------------
  
  
  
