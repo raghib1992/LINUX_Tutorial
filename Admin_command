@@ -255,8 +255,11 @@ sleep 5  # to delay for 5 sec to get back you prompt
  halt
  init
  ------------------------------------------------------------------------------------------------------------------
+ ## changing system hostname
  
- 
+ # to change the hostname
+ hostnamectl set-hostname newhostname
+ ------------------------------------------------------------------------------------------------------------------
  
  
 
