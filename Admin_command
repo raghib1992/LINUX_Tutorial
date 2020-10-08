@@ -203,6 +203,34 @@ sleep 5  # to delay for 5 sec to get back you prompt
  # prioprity
  nice -n 5 command #rating between -20 to 19   -20 has highest priority
   ---------------------------------------------------------------------------
+ ## system monitoring
+ 
+ # disk partition
+ df
+ df -h
+ 
+ # to allocate which file will usage how much space
+ du
+ 
+ # output related to warring, error messageand related to that
+ dmesg
+ 
+ #input output statistics, how communicating with external devices and inernally
+ iostat
+ iostat 1 #keep refreshing after 1 sec
+ ctrl+c to exit
+ 
+ # to check subnet mask
+ netstat -rnv 
+ 
+ # to get in much more details
+ netstat
+ 
+ # to get physical memory and swap spaces (utilisation. usage and free)
+ free
+ 
+ cat /proc/cpuinfo
+ cat /proc/meminfo
  
  
  
