@@ -1,0 +1,8 @@
+# Its like container
+# interface b/w user and kernel
+# CLI is a shell
+
+
+
+# Find your shell echo $0
+cat /etc/shells
