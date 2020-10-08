@@ -247,8 +247,14 @@ sleep 5  # to delay for 5 sec to get back you prompt
  
  tail -f file  # to get updated log
  ----------------------------------------------------------------------------------------------------------------
+ ## System Maintenance Commands
  
- 
+ # to shutdown
+ shutdown  # level 0-6
+ reboot
+ halt
+ init
+ ------------------------------------------------------------------------------------------------------------------
  
  
  
