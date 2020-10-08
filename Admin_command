@@ -271,7 +271,10 @@ sleep 5  # to delay for 5 sec to get back you prompt
 # information processor memory
 dmidecode
 ----------------------------------------------
+## System Architecture
 
+# 32 bit and 64 bit CPU
+arch  # to find architure
 
 
 
