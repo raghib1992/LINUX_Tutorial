@@ -303,11 +303,23 @@ sos-version
 command
 sosreport
 ------------------------------------------------------------------------------
+## Environment Variable
 
+set of defined rules and values to build an environment
 
+# to view environment
+printenv or env
 
+# to view specific environment
+echo $shell
 
+#TO SET ENVIRONMENTVARIABLE PERMANENTLY
+vi .bashrc
+TEST='123'
+export TEST
 
-
-    
+ #TO SET GLOBAL ENVIRONMENTVARIABLE PERMANENTLY
+vi /etc/profile  or /etc/bashrc
+TEST='123'
+export TEST
                       
