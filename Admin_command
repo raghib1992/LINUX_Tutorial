@@ -286,7 +286,15 @@ ctrl+d # to get out of any task
 script filename # the script command stores terminal activities in a log file that can be named by a user, when a name is not provided by a user, the default file name, typescript is used
 exit # to stop recording the session
 --------------------------------------------------------------------------------
-
+### to change root password
+single user mode
+rw init=/sysroot/bin/sh
+ctrl+x
+chroot /sysroot
+passwd root
+exit
+reboot
+--------------------------------------------------------------------------------
 
 
 
