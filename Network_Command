@@ -1,2 +1,50 @@
 # To check IP configuration
 ifconfig /ip addr # to use ifconfig "yum install net-tools"
+
+
+# Network Files
+/etc/nsswitch.conf  #
+/etc/hosts  # tiny version of dns in your machine
+/etc/sysconfig/network
+/etc/sysconfig/network-scripts/
+/etc/resolv.conf
+
+# network command
+ping 
+ifconfig     # to check interface of the system 
+ifdown       # to bring down the network
+ifup         # to bring up the network
+netstat -rnv # gateway and network is flow
+tcpdump      # transction leaving and coming to machine
+
+
+# To know the information about your NIC
+ethtool eth0  # eth0==interface  
+              # lo==loopback used to communicate with itself
+              # virb0==VIrtual Bridge o is used for NAT
+
+# NIC Bonding
+modprobe bonding
+modinfo bonding
+create /etc/sysconfig/network-scripts/ifcfg-bond0
+edit etc/sysconfig/network-scripts/ethernet1
+edit etc/sysconfig/network-scripts/ethernet2
+systemctl restart network
+#verify the setting
+cat /proc/net/bonding/bond0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
