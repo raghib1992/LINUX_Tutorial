@@ -45,6 +45,19 @@ rpm -e packages   # to remove the packages
 yum remove packages
 
 
+## Upgrade system
+
+1. Major Version upgrade 5 to 6 to 7 
+2. Minor version 7.3 7.4
+
+yum update -y ## to minor update
+upgrade ## delete packages
+update  ## preserve
+
+
+
+
+
 
 
 
