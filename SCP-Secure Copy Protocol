@@ -1,0 +1,8 @@
+default port = 22
+
+login as yourself
+create File
+scp file user@192.168.1.x:/home/user/
+Enter Username and Password
+
+
