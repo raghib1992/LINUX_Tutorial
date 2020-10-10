@@ -1,0 +1,35 @@
+## Install and Configure FTP on the remote server
+
+Become root
+rpm -qa | grep ftp   # to check ftp server is available or not
+yum install vsftpd -ypd
+
+vi /etc/vsftpd/vsftpd.conf
+## Disable anonymous login
+anonymous_enable=NO
+##Uncomment
+ascii_upload_enable=YES
+ascii_download_enable=YES
+##Uncomment Enter your Welocme message.
+ftpd_banner=Welcome to Landis+Gyr FTP service
+## Add at the end of the file
+use_localtime=YES
+
+systemctl start vsft
+systemctl enable vsftpd
+systemctl stop firewalld or firewall-cmd --permanenet --zone=public --add-port=21/tcp
+                            firewall-cmd --reload
+
+
+Install FTP client on the client server
+Become root
+yum install ftp
+su - user
+touch share_doc.txt
+
+ftp 192.168.x.x (serverIP)
+Enter username and Password
+bin/bi
+hash
+put share_doc.txt
+bye
