@@ -1,0 +1,20 @@
+## rsync
+
+Default port = 22
+
+
+## Install rsync in your Machine 
+yum install rsync   ## on a client machine
+
+## rsync a file on a local machine
+rsync -zvf filename localfolder
+
+
+## rsync a directory on a local machine
+rsync -azvf old/directory backup/directory
+
+## rsync file on a remot machine
+rsync -avz file user@192.168.1.x:/folder/of/remote/server
+
+## rsync a file from a remote machine
+rsync -azvf user@192.168.1.1:folder/to/remote/server/file client/folder/path
