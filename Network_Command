@@ -35,9 +35,14 @@ cat /proc/net/bonding/bond0
 
 
 
+## rpm
+# rpm installed downloaded packages
+  
 
+rpm -hiv /location/of/packages.rpm  # to install packages
 
-
+rpm -e packages   # to remove the packages
+yum remove packages
 
 
 
