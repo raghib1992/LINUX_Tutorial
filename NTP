@@ -19,3 +19,22 @@ quit
 
 ## NTP port = 123
 
+## chronyd (new version of ntp)
+
+# package=chrony
+ 
+  
+configuration file =/etc/chronyd.conf
+
+LOg file /var/log/chront
+
+service 
+systemctl start chronyd
+
+program command = chronyc
+help  # to get the option
+sources # to know which NTP server is connected
+
+
+
+## donot run ntp and chroyn at same time
