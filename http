@@ -1,0 +1,14 @@
+## Purpose == Serve webpages
+
+## Service or Package Name == httpd
+
+## Files
+/etc/http/conf/httpd.conf
+/var/www/html/index.html
+
+## Log Files
+/var/log/httpd
+
+## service
+systemctl restart httpd
+systemctl enable httpd
