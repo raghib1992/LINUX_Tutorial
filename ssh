@@ -1,5 +1,9 @@
 #### Access Remote Server without Password
 
+## configuration file
+/etc/sshd_config
+
+
 ### CLient side
 ## Generate Key
 ssh-keygen
