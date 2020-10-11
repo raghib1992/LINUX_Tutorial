@@ -5,4 +5,4 @@ create File
 scp file user@192.168.1.x:/home/user/
 Enter Username and Password
 
-
+scp user@remote host:file.txt /folder/of/remote
