@@ -1,0 +1,87 @@
+1 secure user acc
+
+# put unpredectible user name
+# password policy
+chage -l user # to check the passwd change history
+
+cat /etc/shadow  #have same inforamtion which show in chage command
+
+cat /etc/login.defs
+# We can define following paramter here:
+
+PASS_MAX_DAYS   9999
+PASS_MIN_DAYS   0
+PASS_MIN_LEN    5
+
+
+
+cd /etc/pam.d
+more system.auth
+
+
+2. Remove unwanted Package
+rpm -qa | wc -l
+
+3. Unused services
+systemctl -a  # to check all running services
+
+4. Check on listening port
+netstat -tunlp   
+
+5. securing ssh 
+cd/etc/ssh/
+more sshd_config
+  # change the port
+  # uncomment .....PermitRootLogin no
+
+
+6. Enable Firewall
+## FIles
+/etc/firewalld/firewalld.conf
+
+
+firewall-config             # to enter into GUI
+
+firewall-cmd  --help
+
+## in older version iptables
+/etc/sysconfig/iptables-config
+
+
+
+7. Enable SELinux
+Security Enhance Linux   #get brief description on internet
+
+
+# to check it is running or not
+sestatus
+
+stat filename   # to check all rescord selinux monitoring
+
+# to disable
+cd /etc/sysconfig/
+more selinux
+
+SELINUX=
+enforcing
+inforcing
+disable
+
+
+8. OS update
+security update
+
+## to get email and notify by redhat
+
+
+
+
+
+
+
+
+
+
+
+
+
