@@ -1,0 +1,47 @@
+## Advance Package Management
+
+# to check package is install inyour machine
+rpm -qi | grep ksh
+
+# to downalod and install
+1.yum install ksh* -y 
+
+2. wget link
+rpm -hiv fiulename
+
+# to remove the package
+
+1. yum remove ksh
+
+2. rpm -e ksh
+
+
+# TO check the directory of the configuration file of program
+
+rpm -qc package name
+
+# to know the path of thecommand for any packages
+which ksh
+
+
+# if you want to package name of command
+rpm -qf /usr/bin/ksh
+--------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
