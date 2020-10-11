@@ -1,0 +1,31 @@
+## Purpose == send and receive mail
+
+## Files == /etc/mail/sendmail.mc  # here configure are send mail and after everything compliel it send everything to below mention file
+            /etc/mailsendmail.cf   # here it send the mail
+            /etc/mail              # all available here
+## service
+systemctl restart sendmail         #it is deamon
+
+## Command
+mail -s "subject line" email@domain.com
+
+## to check package
+rpm -qa | grep sendmail
+
+## to install
+yum install sendmail -y
+
+## we need to install another package with configure sendmail
+yum install sendmail-cf -y
+
+## configure senmail.mc
+>define (`SMART_HOST`)  # ADD YOUR DOMAIN
+
+# RESTART THE SERVICE
+systemctl restart sendmail
+systemctl status sendmail  # check the status
+
+#command to send email
+mail -s "subject line" hisrarul@gmail.com
+<mail body>
+CTRL+d   # to get out and send mail
