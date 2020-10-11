@@ -1,0 +1,17 @@
+## CENTRAL LOGGER
+
+## Purpoase
+Generate logs or collect logs from other server
+
+## sERVICE OR PACKAGE 
+rsyslog
+rpm -qa | grep rsyslog
+
+## Configuration file
+/etc/rsyslog.conf
+> at end mention the server IP where u send the rsyslog
+#*.* @@remote-host:514
+
+
+## service
+systemctl restart rsyslog
