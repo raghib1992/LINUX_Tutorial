@@ -1,0 +1,128 @@
+Hostname to IP                  A record
+
+IP to Hostname                  PTR record
+
+Hostname to Hostname            CNAME record
+
+
+
+Files
+
+/etc/named.conf
+/var/named       # all the zone file Ip to hostname and vice versa
+
+# service
+systemctl restart named
+
+Setup
+Master Server
+Secondary / Slave Server  ## replication of the master server
+Client        ## resolve hostname to IP address
+
+# Install DNS Package
+yum install bind bind-utils -y   #bind id the package name of DNS
+
+## Configure DNS
+option
+
+listen-on port 52 { menion IP here }
+
+
+# HOstname name to IP
+Zone "Mention DNS NAme" IN {
+  type master;
+  file "forward.lab"
+  allow-update { none; };
+};
+
+# IP to Hostname
+Zone "Mention IP address in reverse order <1.1.168.192>" IN {
+  type master;
+  file "reverse.lab"
+  allow-update { none; };
+};
+
+
+include "/etc/named.rfc1912.zones";
+include "/etc/named.root.key';
+
+
+## Create Zone FIles
+ cd /var/named
+ touch forward.lab
+ and
+ touch reverse.lab
+
+## Modify forward.lab
+Add the following lines:
+
+$TTL 86400
+@ IN SOA masterdns.lab.local. root.lab.local. (
+  2011071001 ;Serial
+  3600 ;Refresh
+  1800 ;Retry
+  604800 ;Expire
+  86400 ;Minimum TTL
+)
+@ IN NS masterdns.lab.local.
+@ IN A 192.168.1.29
+masterdns IN A 192.168.1.29
+clienta IN A 192.168.1.240
+clientb IN A 192.168.1.241
+
+## Modify reverse.lab
+Add the following lines:
+
+$TTL 86400
+@ IN SOA masterdns.lab.local. root.lab.local. (
+  2011071001 ;Serial
+  3600 ;Refresh
+  1800 ;Retry
+  604800 ;Expire
+  86400 ;Minimum TTL
+)
+@ IN NS masterdns.lab.local.
+@ IN PTR lab.local.
+masterdns IN A 192.168.1.29
+158 IN PTR masterdns.lab.local.
+240 IN PTR clienta.lab.local.
+241 IN PTR clientb.lab.local.
+
+## Start DNS Server
+ systemctl start named
+ systemctl enable named
+
+Step 8: Configuring Permissions, Ownership, and SELinux
+# chgrp named -R /var/named
+# chown -v root:named /etc/named.conf
+# restorecon -rv /var/named
+# restorecon /etc/named.conf
+
+Step 9: Test DNS configuration and zone files for any syntax errors
+# named-checkconf /etc/named.conf
+# named-checkzone lab.local /var/named/forward.lab
+# named-checkzone lab.local /var/named/reverse.lab
+
+
+Step 10: Add DNS Server Information to network file
+# vi /etc/sysconfig/network-scripts/ifcfg-enp0s3
+DNS=192.168.1.29
+
+
+Step 11: Restart network service
+# systemctl restart network
+# systemctl restart NetworkManager.service (For CentOS8)
+
+
+Step 12: Modify /etc/resolv.conf
+# nameserver 192.168.1.29
+
+
+Step 13: Test DNS server
+# dig masterdns.lab.local
+# nslookup masterdns.lab.local
+# nslookup clienta.lab.local
+# nslookup clientb.lab.local
+# nslookup 192.168.1.240
+# nslookup 192.168.1.241
+
