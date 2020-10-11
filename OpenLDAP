@@ -1,0 +1,25 @@
+## OpenLDAP
+
+# service
+slapd
+systemctl star slapd
+
+
+#configuration file
+/etc/openldap/slapd.d
+
+
+#to install
+yum install openldap
+
+rpm -qa | grep slapd
+
+systemctl start slaps
+systemctl status slapd
+
+# configuration
+cd /etc/openldap/slapd.d   
+
+cd /etc/
+more nsswitch.conf
+
