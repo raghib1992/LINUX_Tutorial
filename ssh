@@ -1,0 +1,13 @@
+#### Access Remote Server without Password
+
+### CLient side
+## Generate Key
+ssh-keygen
+
+## Copy the key to the server
+ssh-copy-id root@192.168.1.x
+
+## login from client to server
+ssh user@192.168.1.x
+ssh -l root 192.168.1.x
+
