@@ -1,0 +1,21 @@
+## Purpose
+time sync
+
+## File
+/etc/ntp.conf
+edit
+server 
+
+## service
+systemctl restart ntpd
+yum install ntp
+
+
+## command 
+ntpq
+# Interactice mode
+peers
+quit
+
+## NTP port = 123
+
