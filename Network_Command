@@ -60,7 +60,8 @@ update  ## preserve
 nslookup
 dig
 
-
+## File in whic we define static IP
+/etc/sysconfig/network-scripts/ifcfg-nic
 
 
 
