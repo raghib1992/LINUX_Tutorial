@@ -28,6 +28,27 @@ which ksh
 rpm -qf /usr/bin/ksh
 --------------------------------------------------------------------------------------------
 
+## Rolling Back Updates and Packages
+
+
+# Rollback Packages or Patch
+yum install Package_name
+yum history undo <ID>
+
+
+
+# Rollback update
+
+
+yum update 
+
+yum upgrade
+
+yum history undo <ID>
+----------------------------------------------------------------------------------------------------------------------
+
+
+
 
 
 
