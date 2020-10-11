@@ -56,6 +56,9 @@ update  ## preserve
 
 
 
+## DNS Lookup
+nslookup
+dig
 
 
 
